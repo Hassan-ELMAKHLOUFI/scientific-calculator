@@ -9,50 +9,24 @@
     tools:layout_editor_absoluteX="11dp"
     tools:layout_editor_absoluteY="29dp">
 
-    <TextView
-        android:id="@+id/operation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/resultat"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="109dp" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="326dp"
-        android:layout_height="347dp"
+        android:id="@+id/constraintLayout2"
+        android:layout_width="0dp"
+        android:layout_height="142dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout">
 
         <Button
             android:id="@+id/clear"
             android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="20dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/button_backround"
             android:onClick="clear"
@@ -61,19 +35,20 @@
             app:layout_constraintEnd_toStartOf="@+id/openPar"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/delete" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/nine"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/button_backround"
             android:onClick="nine"
             android:text="9"
             android:textColor="@color/white"
-            app:layout_constraintEnd_toStartOf="@+id/sous"
+            app:layout_constraintEnd_toStartOf="@+id/mul"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/eight"
             app:layout_constraintTop_toBottomOf="@+id/closePar" />
@@ -81,7 +56,7 @@
         <Button
             android:id="@+id/zero"
             android:layout_width="0dp"
-            android:layout_height="71dp"
+            android:layout_height="24dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
@@ -91,15 +66,16 @@
             android:textColor="@color/white"
             app:layout_constraintEnd_toStartOf="@+id/decimal"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/one" />
 
         <Button
             android:id="@+id/decimal"
             android:layout_width="0dp"
-            android:layout_height="71dp"
+            android:layout_height="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/button_backround"
             android:onClick="Decimal"
@@ -113,23 +89,25 @@
         <Button
             android:id="@+id/eq"
             android:layout_width="0dp"
-            android:layout_height="73dp"
+            android:layout_height="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/button_backround"
             android:onClick="equal"
             android:text="="
             android:textColor="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/sous"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="@+id/three"
+            app:layout_constraintStart_toEndOf="@+id/decimal"
             app:layout_constraintTop_toBottomOf="@+id/three" />
 
         <Button
             android:id="@+id/one"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="1dp"
             android:background="@drawable/button_backround"
@@ -145,8 +123,9 @@
         <Button
             android:id="@+id/four"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/button_backround"
             android:onClick="four"
@@ -160,8 +139,9 @@
         <Button
             android:id="@+id/seven"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/button_backround"
             android:onClick="seven"
@@ -175,8 +155,9 @@
         <Button
             android:id="@+id/eight"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/button_backround"
             android:onClick="eight"
@@ -190,8 +171,9 @@
         <Button
             android:id="@+id/five"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/button_backround"
             android:onClick="five"
@@ -205,8 +187,9 @@
         <Button
             android:id="@+id/two"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/button_backround"
             android:onClick="two"
@@ -220,8 +203,9 @@
         <Button
             android:id="@+id/three"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/button_backround"
             android:onClick="three"
@@ -235,14 +219,15 @@
         <Button
             android:id="@+id/six"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/button_backround"
             android:onClick="six"
             android:text="6"
             android:textColor="@color/white"
-            app:layout_constraintEnd_toStartOf="@+id/mul"
+            app:layout_constraintEnd_toStartOf="@+id/add"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/five"
             app:layout_constraintTop_toBottomOf="@+id/nine" />
@@ -250,41 +235,37 @@
         <Button
             android:id="@+id/sous"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="20dp"
             android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
             android:background="@drawable/button_backround"
+
             android:onClick="sous"
             android:text="-"
-
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/nine"
-            app:layout_constraintTop_toBottomOf="@+id/add" />
+            app:layout_constraintStart_toEndOf="@+id/eq"
+            app:layout_constraintTop_toBottomOf="@+id/div" />
 
         <Button
             android:id="@+id/mul"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="20dp"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="10dp"
             android:background="@drawable/button_backround"
             android:onClick="mul"
             android:text="X"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/six"
-            app:layout_constraintTop_toBottomOf="@+id/sous" />
+            app:layout_constraintStart_toEndOf="@+id/nine"
+            app:layout_constraintTop_toBottomOf="@+id/delete" />
 
         <Button
             android:id="@+id/div"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="20dp"
             android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
             android:background="@drawable/button_backround"
             android:onClick="div"
             android:text="/"
@@ -292,28 +273,28 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/three"
-            app:layout_constraintTop_toBottomOf="@+id/mul" />
+            app:layout_constraintTop_toBottomOf="@+id/add" />
 
         <Button
             android:id="@+id/closePar"
             android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/button_backround"
             android:onClick="parClose"
             android:text=")"
             android:textColor="@color/white"
-            app:layout_constraintEnd_toStartOf="@+id/add"
+            app:layout_constraintEnd_toStartOf="@+id/delete"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/openPar"
-            app:layout_constraintTop_toBottomOf="@+id/delete" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/openPar"
             android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/button_backround"
             android:onClick="parOpen"
@@ -322,38 +303,294 @@
             app:layout_constraintEnd_toStartOf="@+id/closePar"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/clear"
-            app:layout_constraintTop_toBottomOf="@+id/delete" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
             android:id="@+id/delete"
             android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="20dp"
             android:background="@drawable/button_backround"
             android:contentDescription="deleteButton"
             android:onClick="delete"
             android:src="@drawable/delete_button"
             android:text="Button"
             android:textColor="@color/white"
-            app:layout_constraintEnd_toEndOf="@+id/add"
-            app:layout_constraintStart_toStartOf="@+id/add"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/closePar"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/add"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="20dp"
             android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
             android:background="@drawable/button_backround"
             android:onClick="add"
             android:text="+"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/closePar"
-            app:layout_constraintTop_toBottomOf="@+id/delete" />
+            app:layout_constraintStart_toEndOf="@+id/six"
+            app:layout_constraintTop_toBottomOf="@+id/mul" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="139dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/constraintLayout2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/tan"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_backround"
+            android:onClick="tan"
+            android:text="tan"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/taninv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cos" />
+
+        <Button
+            android:id="@+id/sin"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_backround"
+            android:onClick="sin"
+            android:text="sin"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/sininv"
+            app:layout_constraintEnd_toStartOf="@+id/cos"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/cos"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_backround"
+            android:onClick="cos"
+            android:text="cos"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/cosinv"
+            app:layout_constraintEnd_toStartOf="@+id/tan"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/sin" />
+
+        <Button
+            android:id="@+id/cosinv"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_backround"
+            android:onClick="cosInv"
+            android:text="cos-1"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/ln"
+            app:layout_constraintEnd_toStartOf="@+id/taninv"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/sininv" />
+
+        <Button
+            android:id="@+id/taninv"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_backround"
+            android:onClick="tanInv"
+            android:text="tan-1"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/rac"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cosinv" />
+
+        <Button
+            android:id="@+id/sininv"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_backround"
+            android:onClick="sinInv"
+            android:text="sin-1"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/log"
+            app:layout_constraintEnd_toStartOf="@+id/cosinv"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/ln"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_backround"
+            android:onClick="ln"
+            android:text="ln"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/Pi"
+            app:layout_constraintEnd_toStartOf="@+id/rac"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/log" />
+
+        <Button
+            android:id="@+id/rac"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_backround"
+            android:onClick="rac"
+            android:text="rac"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/abs"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/ln" />
+
+        <Button
+            android:id="@+id/log"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_backround"
+            android:onClick="log"
+            android:text="log"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/e"
+            app:layout_constraintEnd_toStartOf="@+id/ln"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/Pi"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_backround"
+            android:onClick="pi"
+            android:text="Pi"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/xcare"
+            app:layout_constraintEnd_toStartOf="@+id/abs"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/e" />
+
+        <Button
+            android:id="@+id/abs"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_backround"
+            android:onClick="abs"
+            android:text="|x|"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/prime"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/Pi" />
+
+        <Button
+            android:id="@+id/e"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_backround"
+            android:onClick="e"
+            android:text="e"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/exp"
+            app:layout_constraintEnd_toStartOf="@+id/Pi"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/prime"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:background="@drawable/button_backround"
+            android:text="prime"
+            android:onClick="prim"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/xcare" />
+
+        <Button
+            android:id="@+id/xcare"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_backround"
+            android:onClick="xcaree"
+
+            android:text="x2"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/prime"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/exp" />
+
+        <Button
+            android:id="@+id/exp"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_backround"
+            android:onClick="exp"
+            android:text="exp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/xcare"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/resultat"
+        android:layout_width="0dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

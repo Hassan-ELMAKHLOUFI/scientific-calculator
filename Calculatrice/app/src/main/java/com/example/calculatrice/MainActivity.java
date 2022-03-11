@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        operation = this.findViewById(R.id.operation);
         resultat = this.findViewById(R.id.resultat);
         resultat.setShowSoftInputOnFocus(false);
 
@@ -106,12 +105,65 @@ public class MainActivity extends AppCompatActivity {
     public void Decimal(View view){
         changer(".");
     }
+
     public void equal(View view){
         String opt = resultat.getText().toString();
         Expression exp= new Expression(opt);
         String res=String.valueOf(exp.calculate());
         resultat.setText(res);
         resultat.setSelection(resultat.length());
+    }
+    public void sin(View view){
+        changer("sin(");
+    }
+    public void cos(View view){
+        changer("cos(");
+    }
+    public void sinInv(View view){
+        changer("arcsin(");
+    }
+    public void cosInv(View view){
+        changer("arccos(");
+    }
+    public void tan(View view){
+        changer("tan(");
+    }
+    public void tanInv(View view){
+        changer("arctan(");
+    }
+    public void log(View view){
+        changer("log2(");
+    }
+    public void ln(View view){
+        changer("ln(");
+    }
+    public void rac(View view){
+        changer("sqrt(");
+    }
+    public void e(View view){
+        changer("e");
+    }
+    public void pi(View view){
+        changer("pi(");
+        int curPos = resultat.getSelectionStart();
+        int stringSize = resultat.getText().length();
+
+        if(curPos != 0){
+            SpannableStringBuilder selection= (SpannableStringBuilder) resultat.getText();
+            selection.replace(curPos-1,curPos,"");
+        }
+    }
+    public void abs(View view){
+        changer("abs(");
+    }
+    public void prim(View view){
+        changer("ispr(");
+    }
+    public void xcaree(View view){
+        changer("^(2)");
+    }
+    public void exp(View view){
+        changer("exp(");
     }
 
 
